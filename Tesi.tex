@@ -1,0 +1,91 @@
+\documentclass[11pt, openany]{book}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+\usepackage[italian]{babel}
+\usepackage{subfigure}
+\usepackage[a4paper,top=3cm,bottom=3cm,left=2cm,right=2cm,marginparwidth=2cm]{geometry}
+\usepackage{tocbibind}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{midpage}
+\renewcommand{\lstlistingname}{Algoritmi}
+\renewcommand{\lstlistlistingname}{Lista degli \lstlistingname}
+\input{Stilecodice.tex}
+\lstloadlanguages{csh}
+\usepackage{titlesec}
+\usepackage{imakeidx}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{lastpage}
+\pagestyle{plain}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{sidecap, caption}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage[xindy,toc]{glossaries}
+\loadglsentries{glossario}
+\usepackage[sorting=none, block = ragged]{biblatex}
+\addbibresource{Bibliografia.bib}
+\graphicspath{ {./images/} }
+\makeglossaries
+\linespread{1.1}
+\begin{document}
+\begin{titlepage}
+\begin{SCfigure}[14.5][h]
+            \caption*{
+                Università degli studi di Milano Bicocca \\
+                \textbf{Scuola di Scienze} \\
+                \textbf{Dipartimento di Informatica, Sistemistica e Comunicazione} \\
+                \textbf{Corso di Laurea in Informatica} \\
+                }
+            \includegraphics[]{Immagini/logo_bicocca.png}
+\end{SCfigure}
+\begin{center}
+        \vspace{2cm}
+        \textbf{\Huge
+        Integrazione di funzionalità interattive\\in un ambiente di realtà virtuale multi-utente}
+        \vspace{4cm}
+        \begin{FlushLeft}
+        \Large
+            \textbf{Relatore: } \textit{Prof. Giuseppe Vizzari}
+            \\
+            \textbf{Co-relatrice: } \textit{Prof.ssa Daniela Briola}
+        \end{FlushLeft}
+
+        \vspace{2cm}
+        \begin{FlushRight}
+        \Large
+            \textbf{Relazione della prova finale di}
+            \\
+            \textit{Ghezzi Davide \\ Matricola 846114}
+        \end{FlushRight}
+
+        \large \vspace*{\fill} Anno Accademico 2021 - 2022
+    \end{center}
+\newpage
+\end{titlepage}
+\newpage
+\begin{midpage}
+\begin{center}
+\begin{FlushRight}
+ \textit{Alla mia famiglia che mi ha sempre supportato ed incoraggiato \\nelle mie
+scelte e nello studio.
+\\Ai miei amici che ogni giorno hanno condiviso con me momenti di gioia, \\sostenendomi nei periodi di sconforto e non voltandomi mai le spalle.
+\\A tutti i professori e ai ricercatori che hanno contribuito alla mia \\formazione culturale e professionale}.   
+\end{FlushRight}
+\end{center}
+\end{midpage}
+\tableofcontents
+\listoffigures
+\printglossaries
+\input{Capitoli/Introduzione}
+\input{Capitoli/casiduso}
+\input{Capitoli/Tecnologie Abilitanti}
+\input{Capitoli/Sviluppo funzionalità}
+\input{Capitoli/Dimostrazioni d'uso}
+\input{Capitoli/Conclusione}
+\printbibliography[heading=bibintoc, title={Bibliografia e Sitografia}]
+\end{document}

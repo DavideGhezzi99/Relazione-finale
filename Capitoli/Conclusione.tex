@@ -1,0 +1,27 @@
+\chapter{Sviluppi futuri}
+Nei capitoli precedenti sono state illustrate le fasi del progetto, partendo dai requisiti che sono stati fissati fino allo sviluppo delle funzionalità vere e proprie del \textit{software}.
+Il progetto descritto in questa relazione è, appunto, un prototipo, quindi ha molti aspetti che, in futuro, potranno essere migliorati e altri elementi che potranno essere aggiunti al fine di renderlo un prodotto effettivamente utilizzabile a scopi didattici.
+\section{Sviluppi Futuri}
+Saranno ora illustrati alcuni aspetti che sono stati pensati per arricchire e migliorare il prototipo.
+\\Le funzionalità che verranno descritte rappresentano una piccola parte rispetto a tutte quelle che si possono ideare, come è ben noto il mondo della progettazione e sviluppo \textit{software} è ricco di possibilità e alternative.
+\subsection{Visibilità dei Raggi}
+Si prenda, per esempio, uno studente che voglia chiedere informazioni su un punto preciso della scena, tramite la chat vocale o scritta potrebbe risultare complesso dare indicazioni precise sul punto che vuole mettere in risalto, visto che con quegli strumenti non può mostrare agli utenti quello che lui sta visualizzando nel proprio visore. 
+\\Per facilitare questa operazione, potrà essere estremamente utile rendere i raggi di ogni giocatore visibili anche agli altri utenti nella scena. 
+\\In questo modo, se uno studente volesse indicare con uno dei due raggi un punto preciso, anche gli atri utenti vedranno il raggio dello studente che sta indicando quel punto.
+\subsection{Avatar realistici}
+In questo momento, per rappresentare gli utenti in scena, è presente un \textit{\gls{avatar}} stilizzato di un essere umano.
+\\In futuro si potrebbero implementare i seguenti miglioramenti:
+\begin{itemize}
+    \item Un \textit{avatar} che sia simile, il più possibile, ad un essere umano;
+    \item Movimenti delle braccia e delle gambe dell'\textit{avatar} quando l'utente muove i \textit{controller} o si muove nella scena;
+    \item Più modelli di \textit{avatar}, in modo che un utente possa scegliere quello che più desidera.
+\end{itemize}
+\subsection{Ambientazione esistente}
+Lo scenario finale, in cui tutti i giocatori si muovono e interagiscono, rappresenta un castello medioevale, con due piccoli villaggi ai lati, immerso nella natura.
+\\Nell'introduzione è stato spiegato questo scenario è fittizio, siccome lo scopo del progetto è quello di immergere gli utenti in uno scenario reale, in futuro sarà sicuramente necessario importare la rappresentazione digitale di un'ambientazione esistente.
+\subsection{Sistema di Registrazione e Autenticazione}
+Un'altra meccanica sicuramente migliorabile è quella della registrazione e dell'autenticazione dell'utente.
+\\Per quanto riguarda l'insegnate, è presente un file con alcune coppie utente/password per poter passare dalla scena iniziale alla lobby insegnante.
+\\Per lo studente, invece, non è presente alcun tipo di autenticazione vera e propria, deve solo inserire una qualsiasi stringa nel campo apposito per poter passare dalla scena iniziale alla lobby studente.
+\\Inoltre, non è presente un sistema per la registrazione in un database dello \textit{username} degli utenti, questo problema comporta la possibile presenza di due o più utenti con lo stesso \textit{username}.
+\\Esistono alcune aziende che offrono una soluzione per l'aggiunta un sistema di registrazione e autenticazione degli utenti per le applicazioni, una di queste è \textbf{Auth0} \footnote{(\url{https://auth0.com/}) sito web di Auth0}.

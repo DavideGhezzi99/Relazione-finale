@@ -1,0 +1,38 @@
+\chapter{Introduzione}
+Nel corso degli ultimi vent'anni abbiamo assistito ad uno sviluppo esponenziale della tecnologia che ha portato una fetta sempre più grande di pubblico a disporre di hardware con potenza di calcolo elevata ad un costo relativamente contenuto.
+\\Basti pensare, ad esempio, alle TV o telefoni cellulari disponibili agli inizi degli anni 2000 che non possono assolutamente competere con i rispettivi prodotti disponibili attualmente sul mercato.
+\\Di conseguenza, le persone al giorno d'oggi hanno anche a disposizione software molto più complessi e avanzati rispetto al recente passato, grazie ai quali possono affacciarsi sempre più frequentemente a nuove tecnologie.
+\\Una delle tecnologie che ha prepotentemente preso piede negli ultimi anni è la \textbf{Realtà Virtuale}.
+\\La Realtà Virtuale (\textit{Virtual Reality}) è una realtà simulata, un mondo digitale dove si viene immersi indossando un apposito visore, che avvolge totalmente l'utente, andando a mascherare del tutto la percezione, quantomeno visiva, del mondo fisico intorno a lui.
+\\È una tecnologia impiegata soprattutto in ambito videoludico, ma è molto utile anche in ambito didattico, perché è possibile vivere delle esperienze educative grazie alla riproduzione fedele di luoghi storici come monumenti, luoghi di culto, siti archeologici oppure luoghi naturali come fondi oceanici, sentieri montuosi, siti geologici.
+\\Al giorno d'oggi, esistono molteplici applicazioni in realtà virtuale in grado di far vivere all'utente le esperienze viste in precedenza e in cui può anche muoversi per esplorare l'ambiente o interagire con esso.\footnote{\url{https://www.lifewire.com/virtual-reality-tourism-4129394} in questo sito web sono illustrate alcune applicazioni di questo tipo}
+\\Queste applicazioni, seppur molto utili per l'apprendimento didattico individuale, presentano un grosso problema: non supportano la presenza di più utenti, ma, come ben sappiamo, in un aula scolastica solitamente sono presenti un docente e circa venti studenti.
+\\Di conseguenza, le caratteristiche principali che un'applicazione multi-utente deve avere sono:
+\begin{itemize}
+    \item Percezione contemporanea degli utenti e delle loro azioni;
+    \item Interazione con l'ambiente, con modifiche visibili a tutti;
+    \item Possibilità di interagire con gli altri utenti attraverso una chat di testo o vocale (data la difficoltà d’uso di meccanismi di input-output tradizionali mentre si utilizza un visore).
+\end{itemize}
+Lo scopo del progetto è innanzitutto quello di analizzare le soluzioni tecnologiche e programmative per risolvere il problema della mono-utenza, con il fine di rendere effettivamente utili questo tipo di applicazioni per l'apprendimento scolastico, infine quello di ricreare un ambiente che mostri il funzionamento delle suddette soluzioni tramite la realizzazione di un prototipo.
+\section{Requisiti}
+Con le premesse esposte in precedenza, si è voluto realizzare un prototipo di un ambiente di realtà virtuale multi-utente che potesse ospitare circa una ventina utenti, di cui un docente.
+\\Ogni utente ha la percezione visiva e uditiva di ciò che lo circonda, compresi gli altri utenti, per ricreare al meglio la sensazione di presenza e partecipazione all'interno dell'aula virtuale.
+\\Inoltre, al docente è stata data la possibilità di poter disattivare o attivare il microfono di uno o più utenti a suo piacimento ed è stata introdotta anche la possibilità per ogni altro utente di richiedere la parola, proprio come uno studente quando in un aula scolastica \textit{`alza la mano`}.
+\\La grossa differenza rispetto ad un'aula scolastica risiede nell'ambiente in cui tutti gli utenti sono immersi. 
+\\In questo prototipo gli utenti verranno immersi in un ambiente naturale con un castello medioevale esplorabile, questo modello è stato scelto semplicemente per dare un’idea delle possibilità grafiche e farsi un’idea dei costi computazionali, senza per questo aver valutato approfonditamente un contesto disciplinare formativo.
+\\L'ambiente in questione potrebbe essere utile, per esempio, per una lezione di storia, arte o architettura.
+\\Questa particolarità ha portato alla luce un'ulteriore requisito, ovvero la possibilità per il docente di interagire con l'ambiente circostante.
+\\Per il docente, durante la simulazione, può essere molto utile segnalare o indicare particolari luoghi all'interno dell'ambiente, a tale scopo è stata pensata la possibilità di poter piazzare e rimuovere delle bandierine dai suddetti luoghi.
+\\Per concludere, visto la mancata possibilità di disporre di un ambiente virtuale che riproducesse fedelmente un ambiente reale, l'ambiente sviluppato è a scopo illustrativo e ancora allo stato primordiale.
+\section{Realizzazione}
+Il prototipo è stato realizzato in collaborazione con due colleghi del Dipartimento di Informatica Sistemistica e Comunicazione dell'Università degli studi di Milano-Bicocca, Emanuele Sapio e Lorenzo Iacopetta.
+\\Le prime fasi di sviluppo sono state caratterizzate da ricerche approfondite che hanno poi portato ad una suddivisione dei compiti per accelerare la fase di sviluppo del software.
+\\In particolare, i miei colleghi hanno approfondito la parte di \textit{\gls{networking}}, cioè di connessione tra i dispositivi degli utenti, e della chat vocale, attraverso l'uso delle librerie: \textbf{Photon PUN} e \textbf{Photon Voice}.
+\\La parte sviluppata da me, invece, riguarda: l'interazione con l'ambiente da parte del docente, l'implementazione di una chat testuale e l'implementazione di una schermata per l'attivazione e la disattivazione del microfono degli utenti.
+\section{Organizzazione dei Capitoli}
+In questa relazione sono presenti altri 5 Capitoli oltre a questo capitolo introduttivo.
+\\Nel \textbf{Cap.2} sarà presentata la fase di analisi e progettazione del prototipo.
+\\Nel \textbf{Cap.3} si analizzeranno le Tecnologie abilitanti, ovvero gli strumenti che sono stati utilizzati per la progettazione e sviluppo del prototipo.
+\\Nel \textbf{Cap.4} verrà illustrata la parte del prototipo sviluppata dal sottoscritto.
+\\Nel \textbf{Cap.5} verrà mostrato il funzionamento delle parti fondamentali del prototipo attraverso alcune dimostrazioni d'uso.
+\\Nel \textbf{Cap.6} saranno presentati alcuni possibili sviluppi futuri del prototipo e delle sue funzionalità. 
