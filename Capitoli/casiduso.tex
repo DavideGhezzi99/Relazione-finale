@@ -3,8 +3,7 @@ Come anticipato nel capitolo introduttivo, il progetto prevede la creazione di u
 \\In questo capitolo verrà illustrata prima la fase di analisi, attraverso la specifica dei requisiti e dei casi d'uso, successivamente la fase di progettazione, con i diagrammi di \textbf{\textit{workflow}} (flussi di lavoro).
 \section{Specifica dei Requisiti}
 L'analisi dei requisiti funzionali, ha fatto emergere alcune delle proprietà che il sistema deve necessariamente avere per soddisfare la richiesta.
-\\La prima proprietà riguarda gli attori del sistema, secondo la specifica, infatti, è necessario
-distinguere due attori:
+\\La prima proprietà riguarda gli attori del sistema, secondo la specifica, infatti, è necessario distinguere due attori:
 \begin{itemize}
     \item Docente
     \item Studente
@@ -32,17 +31,14 @@ parte del docente, di indicare un punto di interesse.
 Un forte vincolo imposto all'applicazione è rappresentato dall'assenza di un'iscrizione o registrazione.\\ Per semplicità, si è deciso di trascurare questa funzionalità aggiuntiva che necessiterebbe di un \gls{database}, per memorizzare i dati di accesso degli utenti, e di una funzionalità per l'accesso ai dati.
 \\Le credenziali di autenticazione sono specificate in un file json.
 \section{Analisi dei casi d'uso}
-La specifica dei requisiti indica chiaramente la presenza di due attori che
-condividono alcune funzionalità comuni, pertanto è stata creata una generalizzazione,
-chiamata User, di questi due attori.
-\\Per questo motivo, è previsto un sistema di autenticazione che distingue il ruolo dello studente da quello del docente.
+La specifica dei requisiti indica chiaramente la presenza di due attori che condividono alcune funzionalità comuni, pertanto è stata creata una generalizzazione, chiamata Utente, di questi due attori.
 \begin{figure}[H]
     \centering
-    \includegraphics[width = 13cm, height = 16cm]{Immagini/AppUseCase (complete).jpg}
+    \includegraphics[width = 14cm, height = 17cm]{Immagini/AppUseCase (complete).jpg}
     \caption{Diagramma completo dei casi d'uso }
     \label{fig:my_label}
 \end{figure} 
-\hspace*{-0.6cm}Dalle specifiche dei requisiti sono stati identificati 7 casi d'uso, ovvero la descrizione di un insieme di interazioni, tra un utente ed un sistema, che consentono all'utente di raggiungere un obiettivo o di svolgere un compito:
+\hspace*{-0.6cm}Dalle specifiche dei requisiti sono stati identificati 9 casi d'uso, ovvero la descrizione di un insieme di interazioni, tra un utente ed un sistema, che consentono all'utente di raggiungere un obiettivo o di svolgere un compito:
 \begin{itemize}
 \item Autenticazione;
 \item Create Room;
@@ -55,7 +51,7 @@ chiamata User, di questi due attori.
 \item Creazione/Eliminazione di bandierine.
 \end{itemize}
 \subsection{Autenticazione}
-Dalle specifiche risulta evidente  la  necessità  di  distinguere  gli  utenti  in  due  attori, perciò è stato introdotto un meccanismo di autenticazione necessario per la verifica dell'identità dell'utente.
+Dalle specifiche risulta evidente  la  necessità  di  distinguere  gli utenti  in  due  attori, perciò è stato introdotto un meccanismo di autenticazione necessario per la verifica dell'identità dell'utente.
 \\Il caso d'uso \textit{Autenticazione} inizia in seguito all'avvio dell'applicazione, dopodiché l'attore inserisce le proprie credenziali, ovvero \textit{username} e \textit{password} e clicca sul bottone \textit{login}.
 \\Se le credenziali sono errate, il sistema mostrerà un messaggio di errore, se invece l'autenticazione ha successo, l'attore verrà indirizzato verso una nuova scena che differisce a seconda del ruolo in cui si è identificato.
 \begin{figure}[H]
@@ -71,7 +67,7 @@ Il caso d'uso \textit{Create Room} ha come precondizione aver effettuato l'auten
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.6]{Immagini/CreateJoinRoomUseCase.jpg}
-    \caption{Diagramma dei caso d'uso Join Room e Create Room}
+    \caption{Diagramma dei casi d'uso Join Room e Create Room}
     \label{fig:my_label}
 \end{figure}
 Il caso d'uso \textit{Join Room} ha come precondizione aver effettuato l'autenticazione con successo con uno dei ruoli resi a disposizione dal sistema.
@@ -82,7 +78,7 @@ Il caso d'uso \textit{Chat Vocale} ha come precondizione l'accesso ad uno spazio
 \\Non appena gli attori accedono alla stessa aula, il sistema permette loro di comunicare e di vivere un'esperienza audio realistica attraverso la tecnologia \textbf{audio 3D}, che consente all'ascoltatore di percepire il suono da ogni direzione.
 \subsection{Chat di testo}
 Il caso d'uso \textit{Chat di testo} ha come precondizione l'accesso ad uno spazio condiviso da due o più utenti.
-\\Il sistema garantisce una comunicazione network attraverso una interfaccia utente nella quale è possibile scrivere dei messaggi e inviarli agli altri utenti.
+\\Il sistema garantisce una comunicazione network attraverso un'interfaccia utente nella quale è possibile scrivere dei messaggi e inviarli agli altri utenti.
 \subsection{Richiesta di parlare} \label{Request}
 \begin{figure}[H]
     \centering
@@ -100,7 +96,7 @@ Il caso d'uso \textit{Mute/Unmute Utente} ha come precondizione l'accesso ad un'
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.6]{Immagini/VoiceChatUseCase.jpg}
-    \caption{Diagramma dei caso d'uso Voice Chat, Mute/Unmute Utente, Impostazioni}
+    \caption{Diagramma dei casi d'uso Voice Chat, Mute/Unmute Utente, Impostazioni}
     \label{fig:my_label}
 \end{figure}
 \subsection{Creazione/Eliminazione di bandierine}
@@ -109,13 +105,13 @@ Il caso d'uso \textit{Creazione/Eliminazione di bandierine} ha come precondizion
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.6]{Immagini/EnvironmentInteractionUseCase.jpg}
-    \caption{Diagramma dei caso d'uso Creazione/Eliminazione Bandierina}
+    \caption{Diagramma del caso d'uso Creazione/Eliminazione Bandierina}
     \label{fig:my_label}
 \end{figure}
 \section{Diagrammi Workflow}
 La definizione dei casi d'uso porta a scomporre il progetto nelle sue parti costituenti. \\Ognuna di queste risponde ad una specifica necessità emersa dall'analisi dei requisiti. \\Molti casi d'uso si sono tradotti quasi direttamente in un diagramma \textit{workflow}, che mostra il flusso delle diverse attività in un caso d'uso. \\In particolare sono stati definiti 3 diagrammi \textit{workflow} che corrispondono a 3 casi d'uso descritti in precedenza:
 \begin{itemize}
-   \item Autenticatione Workflow;
+   \item Autenticazione Workflow;
    \item Create Room Workflow;
    \item Join Room Workflow.
 \end{itemize}
@@ -153,7 +149,7 @@ In questo diagramma sono mostrate le attività che vengono svolte durante la cre
 \begin{figure}[H]
     \centering
     \includegraphics[width = 17cm, height = 13cm]{Immagini/JoinRoomActivityDiagram.jpg}
-    \caption{Diagramma Workflow di Autenticazione}
+    \caption{Diagramma Workflow di Join Room}
     \label{fig:my_label}
 \end{figure}
 In questo diagramma sono illustrate le attività svolte durante l'operazione di collegamento ad una stanza creata. 
@@ -164,4 +160,4 @@ In questo diagramma sono illustrate le attività svolte durante l'operazione di 
 \\Una volta caricate le aule disponibili, l'utente può sceglierne una, e al click, l'applicazione invierà la richiesta di ingresso all'aula al server Photon. 
 \\Sarà poi il sistema, in seguito all'attività del server, a caricare la scena relativa all'aula selezionata.
 \\Quindi, ogni applicazione possiede una o più scene da caricare, quello che permette la comunicazione tra utenti è la connessione allo stesso server Photon.
-\\Gli utenti potranno vedersi e interagire tra loro nella scena finale grazie alla presenza di un \textit{avatar}: ogni utente possiede un \textit{avatar} che è stato progettato con delle componenti \textit{sofware} in grado di renderlo percepibile a tutti gli altri utenti collegati alla stessa stanza virtuale.
+\\Gli utenti potranno vedersi e interagire tra loro nella scena finale grazie alla presenza di un \textit{Avatar}: ogni utente possiede un \textit{Avatar} che è stato progettato con delle componenti \textit{sofware} in grado di renderlo percepibile a tutti gli altri utenti collegati alla stessa stanza virtuale.

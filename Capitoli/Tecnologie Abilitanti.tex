@@ -1,26 +1,26 @@
 \chapter{Tecnologie Abilitanti}
 In questo capitolo verranno descritti gli strumenti e le tecnologie che sono stati utilizzati per la realizzazione dei requisiti software illustrati nel \textbf{Cap.2}.
 \section{Realtà Virtuale}
-La Realtà Virtuale\cite{VRRe} è un ambiente esclusivamente digitale creato da uno o più computer che simula la realtà effettiva e la ricrea in modo non tangibile e che viene visualizzato dall'utente tramite l'utilizzo di strumenti particolari, detti \textit{VR Headset}.
+La Realtà Virtuale\cite{VRRe} è un ambiente esclusivamente digitale, creato da uno o più computer, che simula la realtà effettiva e la ricrea in modo non tangibile, che viene visualizzato dall'utente tramite l'utilizzo di strumenti particolari, detti \textit{VR Headset}.
 \\L'obiettivo principale di questa tecnologia è quello di ricreare un ambiente che stimoli il più possibile i 5 sensi, in modo da rendere il tutto molto più realistico.
 \\L'architettura necessaria per poter usufruire in maniera completa della Realtà Virtuale è composta da:
 \begin{itemize}
-    \item Visori che abbiano determinate caratteristiche quali ad esempio un campo visivo dai 100 ai 110 gradi, un \textit{frame} rate (frequenza di immagini proiettate al secondo) compreso tra un minimo di almeno 60fps ed un massimo di 120fps per evitare una visione a scatti fastidiosa agli occhi
+    \item Visori che abbiano determinate caratteristiche quali, ad esempio, un campo visivo dai 100 ai 110 gradi, un \textit{frame rate} (frequenza di immagini proiettate al secondo) compreso tra un minimo di almeno 60fps ed un massimo di 120fps per evitare una visione a scatti fastidiosa agli occhi
     \item Un giroscopio che consenta, insieme ad un accelerometro ed ad un magnetometro, il cosiddetto \textit{Head Tracking}, ovvero lo spostamento dell'immagine seguendo esattamente i movimenti del capo lungo i quattro punti cardinali e con tempi di risposta dai cinquanta millisecondi ai trenta millisecondi. 
     \\Tutto questo è sviluppato volutamente per far si che l'utente possa interagire e “vivere” all'interno della Realtà Virtuale. 
-    \item La presenza all'interno del visore di un sistema audio professionale multicanale che offra la sensazione di suoni che provengono da tutte le direzioni e che consentano il cosiddetto effetto doppler (con l'aumentare del suono in avvicinamento ed il diminuire in allontanamento), sia da un sofisticato sistema di puntamento ad infrarossi che consente di leggere il movimento oculare (il cosiddetto \textit{eye tracking}) rendendo ancora più realistica l'immersione nell'ambiente virtuale mediante la creazione della profondità di campo.
+    \item La presenza all'interno del visore di un sistema audio professionale multicanale che offra la sensazione di suoni che provengono da tutte le direzioni e che consentano il cosiddetto effetto doppler (con l'aumentare del suono in avvicinamento ed il diminuire in allontanamento), sia da un sofisticato sistema di puntamento ad infrarossi che consente di leggere il movimento oculare (il cosiddetto \textit{Eye Tracking}) rendendo ancora più realistica l'immersione nell'ambiente virtuale mediante la creazione della profondità di campo.
 \end{itemize} 
 Nell'introduzione è stata illustrata l'utilità della Realtà Virtuale in ambito didattico, ma può essere impiegata in molteplici campi, come ad esempio nella medicina.
-\\Nel campo medico la Realtà Virtuale sta diventando uno strumento non soltanto formativo, ma anche terapeutico ed operativo, con l'epilogo più famoso ad aprile di un anno fa al Royal London Hospital dove si è svolta in collegamento con l'India la prima operazione chirurgica della storia in realtà virtuale trasmessa in tempo reale.
+\\Nel campo medico la Realtà Virtuale sta diventando uno strumento non soltanto formativo, ma anche terapeutico ed operativo, con l'epilogo più famoso ad aprile 2016 al Royal London Hospital dove si è svolta in collegamento con l'India la prima operazione chirurgica della storia in realtà virtuale trasmessa in tempo reale.
 \subsection{Headset}
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.5]{Immagini/Oculus-Quest-2.jpg}
     \caption{Oculus Quest 2 con i relativi controller}
-    \label{fig:my_label}
+    \label{fig:Figura 3.1}
 \end{figure}
 Un \textit{Virtual Reality Headset}\cite{Vrheadset}, o \textit{VR Headset}, è un dispositivo elettronico, detto visore, che permette la visone di applicazioni sviluppate per la Realtà Virtuale.\\Esistono due categorie di \textit{VR Headset}, quelli che necessitano di un collegamento ad un dispositivo Desktop e i dispositivi portatili con hardware dedicato.\\I primi sono i più indicati per lo sviluppo di ambienti in Realtà Virtuale sofisticati, visto che un PC è dotato di una potenza di calcolo mediamente superiore a quella di un dispositivo con hardware dedicato, ma di fatto ciò che l'utente vede è un semplice \gls{render} in tempo reale del mondo virtuale.\\I \textit{VR Headset} portatili con hardware integrato, o \textit{standalone} non offrono una resa grafica alla pari dei visori descritti precedentemente, ma permettono comunque di immergere l'utente in un'ambientazione verosimile, garantendo il vantaggio della portabilità.
-\\Il prototipo sviluppato è stato pensato per essere utilizzabile sul modello di visore rappresentato nella \textbf{Figura 3.1}.
+\\Il prototipo sviluppato è stato pensato per essere utilizzabile sul modello di visore rappresentato nella \textbf{Figura \ref{fig:Figura 3.1}}.
 \\L'Oculus Quest 2 è un modello di visore \textit{standalone}, con esso è possibile non solo giocare ai giochi appositamente pensati per la Realtà Virtuale, ma anche guardare film come se si fosse al cinema, crearsi la propria configurazione multi-monitor per lavorare, visualizzare foto e video a 360 gradi, e fare tutto quello che ci viene in mente sempre immersi in un mondo virtuale.
 \\Il visore si può configurare attraverso \textit{l'app Oculus}, scaricabile nel proprio \textit{smartphone}, e, una volta indossato, ci ritroveremo subito all'interno della \textit{home}, dalla quale potremo avviare tutte le \textit{app} e i giochi in nostro possesso. 
 \\Nel mondo virtuale si può interagire con i \textit{controller} \textit{Oculus Touch}, le funzionalità pensate per gli utenti in questo prototipo si basano, perciò, sulle specifiche tecniche di questi \textit{controller}.
@@ -79,7 +79,7 @@ L'Inspector\cite{unityInspector} è la sezione dell'Editor dedicata alla gestion
 \hspace{-0.6cm}È questo uno dei vantaggi che si ha nello sviluppo di applicazioni con \textit{Unity}, ovvero avere un'interfaccia interattiva nella quale si possono effettuare modifiche su oggetti e componenti che hanno effetto immediato sulla Scena.
 \vspace{-2cm}
 \subsubsection{Project}
-Project\cite{unityProject} è la sezione dell'Editor che mostra la cartella `Assets` del progetto creato, che contiene tutti gli elementi che possono essere utilizzati all'interno del progetto.
+Project\cite{unityProject} è la sezione dell'Editor che mostra la cartella \textit{`Assets`} del progetto creato, che contiene tutti gli elementi che possono essere utilizzati all'interno del progetto.
 \\Oltre agli elementi che si possono creare con \textit{Unity}, è possibile creare e importare elementi dell'Assets dall'esterno, come per esempio modelli 3D, file Audio, file Video, immagini o qualsiasi altro file compatibile con \textit{Unity}.
 \vspace{1cm}
 \begin{figure}[H]
@@ -89,7 +89,7 @@ Project\cite{unityProject} è la sezione dell'Editor che mostra la cartella `Ass
     \label{fig:my_label}
 \end{figure}
 \subsubsection{Console}
-La Console\cite{unityconsole} è la sezione dell'Editor in cui si possono trovare i messaggi di errore, con il simbolo rosso, messaggi di avvertimento (\textit{warning}) e altri messaggi generati da \textit{Unity}.
+La Console\cite{unityconsole} è la sezione dell'Editor in cui si possono trovare i messaggi di errore, con il simbolo rosso, messaggi di avvertimento (\textit{Warning}) e altri messaggi generati da \textit{Unity}.
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.75]{Immagini/Console.jpg}
@@ -110,12 +110,13 @@ Il \textit{Common Language Runtime} rappresenta la base di \textit{.NET Framewor
     \centering
     \includegraphics[scale = 0.6]{Immagini/architettura-framework-dotnet.png}
     \caption{Architettura della piattaforma .NET Framework}
-    \label{fig:my_label}
+    \label{fig:3.9}
 \end{figure}
-\hspace{-0.6cm}Nella \textbf{Figura 3.9} sono illustrate le relazioni, in fase di compilazione (\textit{Compile Time}) e di esecuzione (\textit{Runtime}), tra i file di codice sorgente C\#, o degli altri linguaggi, le librerie di classi di \textit{.NET Framework}, gli \textit{assembly} e il CLR.
-\\Il codice sorgente scritto in C\# viene compilato in un linguaggio intermedio (\textit{Intermediate Language}, IL). Il codice IL viene archiviato sul disco in un file eseguibile denominato \textit{assembly}, in genere con estensione EXE o DLL.
+\hspace{-0.6cm}Nella \textbf{Figura \ref{fig:3.9}} sono illustrate le relazioni, in fase di compilazione (\textit{Compile Time}) e di esecuzione (\textit{Runtime}), tra i file di codice sorgente C\#, o degli altri linguaggi, le librerie di classi di \textit{.NET Framework}, gli \textit{assembly} e il CLR.
+\\Il codice sorgente scritto in C\# viene compilato in un linguaggio intermedio (\textit{Intermediate Language}, IL). 
+\\Il codice IL viene archiviato sul disco in un file eseguibile denominato \textit{assembly}, in genere con estensione EXE o DLL.
 \\Quando viene eseguito il programma C\#, l'\textit{assembly} viene caricato nel CLR, e se i requisiti di sicurezza sono soddisfatti, il CLR esegue una compilazione \textit{Just-In-Time} (JIT) per convertire il codice IL in istruzioni del linguaggio macchina nativo.
-\\Le librerie di classi sono una raccolta completa e orientata agli oggetti di tipi riusabili, da utlizzare per lo sviluppo di applicazioni, da quelle tradizionali a riga di comando o con interfaccia utente grafica (GUI, \textit{Graphical User Interface}) a quelle basate sulle più recenti innovazioni offerte da ASP.NET, quali Web Form e servizi Web XML, Web API e tanto altro.
+\\Le librerie di classi sono una raccolta completa e orientata agli oggetti di tipi riusabili, da utilizzare per lo sviluppo di applicazioni, da quelle tradizionali a riga di comando o con interfaccia utente grafica (GUI, \textit{Graphical User Interface}) a quelle basate sulle più recenti innovazioni offerte da ASP.NET, quali Web Form e servizi Web XML, Web API e tanto altro.
 \begin{lstlisting}[caption = Esempio di utilizzo di librerie in C\#]
 using System.Collections;
 using System.Collections.Generic;
@@ -123,9 +124,9 @@ using UnityEngine;
 ...
 \end{lstlisting}
 \subsection{MonoBehaviour}
-\textit{MonoBehaviour}\cite{Mono} è la classe di base che tutti gli script in \textit{Unity} devono avere.\\La classe MonoBehaviour espone una serie di funzioni evento che vengono chiamate da \textit{Unity} al verificarsi di determinate condizioni.\\
-Ad esempio, un evento come \textit{MonoBehaviour.OnCollisionEnter()} si verificherà ogni volta che un oggetto entra in collisione con un altro oggetto.
-\\Quando questo accade, \textit{Unity} provvederà a richiamare automaticamente il metodo \textit{OnCollisionEnter}(la lista degli eventi è consultabile qui\cite{Eventi}).
+\textit{MonoBehaviour}\cite{Mono} è la classe di base che tutti gli script in \textit{Unity} devono avere.\\La classe MonoBehaviour espone una serie di funzioni evento che vengono chiamate da \textit{Unity} al verificarsi di determinate condizioni.
+\\Ad esempio, un evento come \textit{MonoBehaviour.OnCollisionEnter()} si verificherà ogni volta che un oggetto entra in collisione con un altro oggetto.
+\\Quando questo accade, \textit{Unity} provvederà a richiamare automaticamente il metodo \textit{OnCollisionEnter()}(la lista degli eventi è consultabile qui\cite{Eventi}).
 \\Le funzioni evento vanno richiamate all'interno di metodi specifici della classe MonoBehaviour, i 3 principali sono:
 \begin{itemize}
     \item \textit{Awake}();
@@ -133,12 +134,13 @@ Ad esempio, un evento come \textit{MonoBehaviour.OnCollisionEnter()} si verifich
     \item \textit{Update}().
 \end{itemize}
 I Metodi \textit{\textit{Awake}} e \textit{\textit{Start}} vengono chiamati una sola volta nel ciclo di vita di un oggetto. 
-\\La differenza fra i due sta nel fatto che \textit{\textit{Awake}} viene chiamato molto presto, durante la preparazione della scena. In quel momento gli oggetti in scena non sono completamente valorizzati, quindi in \textit{Awake} è sconsigliato svolgere operazioni che richiedono i valori di altri oggetti, come ad esempio leggere il \textit{tag} di un altro oggetto in scena.
+\\La differenza fra i due sta nel fatto che \textit{\textit{Awake}} viene chiamato molto presto, durante la preparazione della scena.
+\\In quel momento gli oggetti in scena non sono completamente valorizzati, quindi in \textit{Awake} è sconsigliato svolgere operazioni che richiedono i valori di altri oggetti, come ad esempio leggere il \textit{tag} di un altro oggetto in scena.
 \\\textit{\textit{Start}} è utile per eseguire operazioni di preparazione al gioco, come la ricerca di elementi nella scena di cui vogliamo salvare un riferimento per poi lavorarci più avanti durante l'esecuzione.
 \\Molto interessante è il tempismo di chiamata dei due metodi a seconda dello stato, attivo o disattivo, dello script in cui compaiono \textit{Awake} e \textit{Start} e il \textit{GameObject} su cui risiede lo script, che viene illustrato nella seguente immagine:
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.6]{Immagini/Awake}.jpg]
+    \includegraphics[scale = 0.6]{Immagini/Awake.jpg}]
     \caption{Tempismo di chiamata dei metodi \textit{Awake} e \textit{Start}}
     \label{fig:my_label}
 \end{figure} 
@@ -189,11 +191,11 @@ Le librerie \textit{Photon} importate sono:
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.7]{Immagini/PhotonStructure.jpg}
-    \caption{Struttura di Photon engine}
-    \label{fig:my_label}
+    \caption{Struttura di Photon Engine}
+    \label{fig:3.11}
 \end{figure}
 \textit{Photon Engine\cite{Photon}} è un motore grafico specializzato nello sviluppo di applicazioni multi-utente.
-Nella \textbf{Figura 3.11} si può vedere che il motore grafico è composto da due parti principali:
+\\Nella \textbf{Figura \ref{fig:3.11}} si può vedere che il motore grafico è composto da due parti principali:
 \begin{itemize}
     \item \textit{Photon Cloud};
     \item \textit{Photon Realtime}.
@@ -205,7 +207,7 @@ Il \textit{Photon Cloud} è un soluzione \textbf{SaaS} (\textit{Software As A Se
 \begin{itemize}
     \item PUN (\textit{Photon Unity Networking}), utilizzata per la connessione tra utenti;
     \item \textit{Photon Voice}, utilizzata per la comunicazione vocale tra utenti;
-    \item \textit{Photon Chat}, utlizzata per la comunicazione via chat tra utenti.
+    \item \textit{Photon Chat}, utilizzata per la comunicazione via chat tra utenti.
 \end{itemize}
 \subsection{Implementazione di PUN in Unity}
 In questa sezione saranno illustrati i passaggi fondamentali per la preparazione di un progetto \textit{Unity} alle funzionalità multi-utente di \textit{Photon}.
@@ -213,11 +215,11 @@ In questa sezione saranno illustrati i passaggi fondamentali per la preparazione
     \centering
     \includegraphics[scale = 0.3]{Immagini/Sitophoton.jpg}
     \caption{Dashboard delle applicazioni Photon Realtime}
-    \label{fig:my_label}
+    \label{fig:3.12}
 \end{figure}
-\hspace{-0.6cm}La \textbf{Figura 3.12} mostra la dashboard delle applicazioni \textit{Photon} Realtime descritte in precedenza, l'accesso alla dashboard è consentito dopo aver creato un account \textit{Photon} gratuitamente.
+\hspace{-0.6cm}La \textbf{Figura \ref{fig:3.12}} mostra la dashboard delle applicazioni \textit{Photon} Realtime descritte in precedenza, l'accesso alla dashboard è consentito dopo aver creato un account \textit{Photon} gratuitamente.
 \\Ogni applicazione, Chat, PUN o Voice, è caratterizzata da un App ID che, dopo aver installato il package PUN
-dall'Asset Store di \textit{Unity}, va inserito nell'apposito campo nella sezione dell'editor \textit{`Window/Photon Unity Networking/Highlight Server Setting`}.
+dall'Asset Store di \textit{Unity}, va inserito nell'apposito campo nella sezione dell'editor \textit{`Window/Photon Unity Networking/Highlight Server Settings`}.
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.7]{Immagini/Setting.jpg}

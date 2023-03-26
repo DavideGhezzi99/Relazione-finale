@@ -11,22 +11,22 @@ Prima di procedere con la descrizione delle funzionalità vere e proprie, è nec
     \centering
     \includegraphics[scale = 1]{Immagini/XROrigin.jpg}
     \caption{XR Origin nella Hierarchy del progetto}
-    \label{fig:my_label}
+    \label{fig:4.1}
 \end{figure}
 \hspace{-0.6cm}La presenza di questo oggetto all'interno del progetto è vitale, perché senza esso gli utenti non possono in alcun modo muoversi nell'ambiente, compiere qualsiasi tipo di azione o visualizzare la scena nel proprio visore. 
-\\Nella \textbf{Figura 4.1} è rappresentato XR Origin con le sue componenti:
+\\Nella \textbf{Figura \ref{fig:4.1}} è rappresentato XR Origin con le sue componenti:
 \begin{itemize}
     \item \textit{Main Camera}: l'oggetto che permette la visualizzazione della scena all'utente;
-    \item \textit{Lefhand Controller}: l'oggetto che rappresenta il \textit{controller} sinistro nella scena
+    \item \textit{LeftHand Controller}: l'oggetto che rappresenta il \textit{controller} sinistro nella scena
     \item \textit{RightHand Controller}: l'oggetto che rappresenta il \textit{controller} destro nella scena
 \end{itemize}
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.8]{Immagini/InspectorXRcontroller.jpg}
-    \caption{Componenti del Left Hand Controller}
-    \label{fig:my_label}
+    \caption{Componenti del LeftHand Controller}
+    \label{fig:4.2}
 \end{figure}
-Nella \textbf{Figura 4.2} sono illustrate le componenti che abilitano il \textit{controller} sinistro (\textit{LeftHan Controller}) allo svolgimento di determinate azioni.
+Nella \textbf{Figura \ref{fig:4.2}} sono illustrate le componenti che abilitano il \textit{controller} sinistro (\textit{LeftHand Controller}) allo svolgimento di determinate azioni.
 \\Per esempio, le componenti \textit{XR Ray Interactor, Line Render, XR Interactor Line Visual} si occupano della renderizzazione grafica di un raggio e dell'interazione che ha quest'ultimo con gli oggetti in scena, mentre \textit{XR Controller} è la componente che si occupa di tracciare i vari input che provengono dal \textit{controller} sinistro, quali il movimento lungo i tre assi cardinali e la pressione di uno specifico tasto.
 \\Ovviamente le componenti appena elencate, se applicate all'oggetto \textit{RightHand Controller}, hanno l'effetto analogo sul \textit{controller} destro.
 \section{Creazione e distruzione di oggetti}
@@ -52,15 +52,15 @@ Questa funzionalità è stata progettata per poter permettere al docente di mani
     \centering
     \includegraphics[width = 16cm, height = 7cm]{Immagini/Object_spawner.jpg}
     \caption{Object\_Spawner in dettaglio}
-    \label{fig:my_label}
+    \label{fig:4.5}
 \end{figure}
-\hspace{-0.6cm}Nella \textbf{Figura 4.5} sono illustrati i campi pubblici della classe \textit{Object\_Spawner} nell'\textit{Inspector Panel} di Unity.
+\hspace{-0.6cm}Nella \textbf{Figura \ref{fig:4.5}} sono illustrati i campi pubblici della classe \textit{Object\_Spawner} nell'\textit{Inspector Panel} di Unity.
 \\Dall'alto verso il basso troviamo:
 \begin{itemize}
     \item \textbf{XR Ray Interactor}: il raggio del \textit{controller} (nel nostro caso verrà impostato il raggio sinistro);
     \item \textbf{Bandierina}: il modello della bandierina che si vuole creare;
-    \item \textbf{Objects\_where\_spawn}: lista di oggetti (pannelli) su cui le bandierine possono essere create;
     \item \textbf{Spawn Posizion}: il punto di collisione tra il raggio e un oggetto in scena;
+    \item \textbf{Objects\_where\_spawn}: lista di oggetti (pannelli) su cui le bandierine possono essere create;
     \item \textbf{Action}: il comando sul \textit{controller} sinistro (in questo caso il tasto \textit{triggerButton}) che permette di eseguire il metodo indicato nella sezione \textit{On Press()} (il metodo \textit{SpawnObj()});
     \item \textbf{Cosa Colpisco}: l'oggetto con cui interseca il raggio del \textit{controller} sinistro.
 \end{itemize}
@@ -69,22 +69,22 @@ L'abilitazione dell'azione, cioè il tasto sul \textit{controller}, è gestita n
     \centering
     \includegraphics[scale = 0.45]{Immagini/Diagramma SpawnObj().jpg}
     \caption{Diagramma di flusso del metodo Update() della classe Object\_Spawner}
-    \label{fig:my_label}
+    \label{fig:4.6}
 \end{figure}
-\hspace{-0.6cm}Il metodo \textit{Update()} viene eseguito costantemente durante l'esecuzione dell'applicazione, perciò le condizioni mostrate nella \textbf{Figura 4.6} vengono controllate di continuo.
+\hspace{-0.6cm}Il metodo \textit{Update()} viene eseguito costantemente durante l'esecuzione dell'applicazione, perciò le condizioni mostrate nella \textbf{Figura \ref{fig:4.6}} vengono controllate di continuo.
 \subsection{Object\_Destroyer}
 \textit{Object\_Destroyer} è la classe C\# che permette al docente di distruggere le bandierine in scena.\\Questa componente è applicata all'oggetto \textit{Bandierina} e le bandierine potranno essere distrutte esclusivamente tramite l'utilizzo del \textit{controller} sinistro.
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.7]{Immagini/Object_destoryer.jpg}
     \caption{Object\_Destroyer e DestroyObject in dettaglio}
-    \label{fig:my_label}
+    \label{fig:4.7}
 \end{figure}
-\hspace{-0.6cm}Nella \textbf{Figura 4.7} sono illustrati i campi pubblici della classe \textit{Object\_Destroyer} nell'\textit{Inspector Panel} di Unity.
+\hspace{-0.6cm}Nella \textbf{Figura \ref{fig:4.7}} sono illustrati i campi pubblici della classe \textit{Object\_Destroyer} nell'\textit{Inspector Panel} di Unity.
 \\Dall'alto verso il basso troviamo:
 \begin{itemize}
     \item \textbf{XR Ray Interactor}: raggio del \textit{controller} (nel nostro caso verrà impostato il raggio sinistro);
-    \item \textbf{Original Object}: il modello della bandierina che si vuole distruggere;
+    \item \textbf{Bandierina}: il modello della bandierina che si vuole distruggere;
     \item \textbf{Cosa Colpisco}: l'oggetto con cui interseca il raggio del \textit{controller} sinistro;
     \item \textbf{Action}: il comando sul \textit{controller} sinistro (in questo caso il tasto \textit{secondaryButton}) che permette di eseguire il metodo indicato nella sezione \textit{On Press()} (il metodo \textit{DestroyObject.Destroy}));
     \item \textbf{Nome Pannello}: il nome del pannello su cui la bandierina viene creata;
@@ -94,9 +94,9 @@ L'abilitazione dell'azione, cioè il tasto sul \textit{controller}, è gestita n
     \centering
     \includegraphics[scale = 0.45]{Immagini/ObjectDestroyer().jpg}
     \caption{Diagramma di flusso del metodo Update() della classe Object\_Destroyer}
-    \label{fig:my_label}
+    \label{fig:4.8}
 \end{figure}
-\hspace{-0.6cm}Anche in questo caso, il metodo \textit{Update()} viene eseguito costantemente durante l'esecuzione dell'applicazione, perciò le condizioni mostrate nella \textbf{Figura 4.8} vengono controllate di continuo.
+\hspace{-0.6cm}Anche in questo caso, il metodo \textit{Update()} viene eseguito costantemente durante l'esecuzione dell'applicazione, perciò le condizioni mostrate nella \textbf{Figura \ref{fig:4.8}} vengono controllate di continuo.
 \\La differenza rispetto al caso della creazione delle bandierine, è che il metodo abilitato appartiene ad una classe esterna.
 \\Per concludere, si può notare che le funzionalità appena descritte sono delegate ai comandi del \textit{controller} sinistro, questa scelta è stata effettuata sia per una comodità d'uso, per un utente potrebbe risultare scomodo utilizzare una funzionalità sul \textit{controller} sinistro e una sul \textit{controller} destro, sia in ottica sviluppi futuri, applicare le stesse funzionalità ad entrambi i \textit{controller} costringe lo sviluppatore a toglierle da un \textit{controller} prima di poterne applicare altre.
 \section{Unity Canvas e Interfaccia Utente}
@@ -123,8 +123,8 @@ Questa funzionalità è stata ideata per aggiungere un altro tipo di comunicazio
     \caption{Chat Room Canvas}
     \label{fig:my_label}
 \end{figure}
-    Per inviare i messaggi è necessario innanzitutto scrivere, tramite la tastiera, nel campo con il testo `Entet text`, e successivamente premere il bottone `Send Button`.
-    \\È presente anche un bottone (`Request Talk`) per l'invio sulla chat di un messaggio prefabbricato, che lo studente può utilizzare qualora volesse richiedere l'attivazione del proprio microfono al docente. 
+    Per inviare i messaggi è necessario innanzitutto scrivere, tramite la tastiera, nel campo con il testo \textit{`Enter text`}, e successivamente premere il bottone \textit{`Send Button`}.
+    \\È presente anche un bottone (\textit{`Request Talk`}) per l'invio sulla chat di un messaggio prefabbricato, che lo studente può utilizzare qualora volesse richiedere l'attivazione del proprio microfono al docente. 
     \item Open Chat: Canvas con un apposito bottone che permette di aprire \textit{Chat Room}, è stato impostato un timer di 30 secondi che chiude \textit{Chat Room} se in quel lasso di tempo non sono arrivati messaggi sulla chat;
     \begin{figure}[H]
     \centering
@@ -180,7 +180,7 @@ Anche in questo caso verrà illustrato il diagramma di sequenza per comprendere 
     \caption{Diagramma di sequenza per l'attivazione e disattivazione del microfono}
     \label{fig:my_label}
 \end{figure}
-\hspace{-0.6cm}Per sviluppare questa funzionalità è stato necessario ricorrere ad una particolare proprietà della libreria \textit{Phton.Pun}: le \textbf{RPC}.
+\hspace{-0.6cm}Per sviluppare questa funzionalità è stato necessario ricorrere ad una particolare proprietà della libreria \textit{Photon.Pun}: le \textbf{RPC}.
 \\Le chiamate di procedura remota (\textit{RPC}) sono il modo in cui \textit{Photon} esegue eventi o notifiche che si basano sul networking.
 \\Impostando l'attributo RPC su un metodo, esso viene richiamato anche per gli altri utenti connessi alla rete \textit{Photon} o che si connetteranno in seguito.
 \\In questo caso specifico, la chiamata di procedura remota è applicata al metodo che attiva o disattiva la componente microfono di un giocatore.
